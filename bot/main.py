@@ -1,9 +1,15 @@
 # bot
 from booking.booking import Booking
 
-# booking_bot = Booking()
-# booking_bot.land_first_page()
 
 with Booking() as bot:
     bot.land_first_page()
-    print("Exiting")
+    # bot.change_currency(currency='USD')
+    bot.search_place_to_visit(place_to_visit='New York')
+    bot.select_date()
+    bot.select_adults()
+    bot.click_search()
+    bot.apply_sort()
+    bot.add_more_filters()
+    print("[main] Exiting")
+
